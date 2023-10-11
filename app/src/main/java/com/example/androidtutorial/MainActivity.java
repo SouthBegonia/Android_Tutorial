@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.example.androidtutorial.Utils.CommonUtils;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,8 +28,19 @@ public class MainActivity extends AppCompatActivity {
         androidBtn.setText("Btn01");
         androidBtn.setBackgroundColor(Color.LTGRAY);
         androidBtn.setOnClickListener((View view) -> {
-            Toast toast = Toast.makeText(this, "Hello, Toast!", Toast.LENGTH_SHORT);
-            toast.show();
+            //TODO Test
+
+            //Toast
+            CommonUtils.ShowCommonToast(this, "Hello World");
+
+            //PackageName
+            //CommonUtils.ShowCommonToast(this, CommonUtils.GetPackageName(this));
+
+            //跳转商店
+            //String packageName = "com.facebook.katana"; //CommonUtils.GetPackageName(this);
+            //String storePkg = CommonUtils.GetAppStorePkg(CommonUtils.E_AppStorePkg.GooglePlay);
+            //CommonUtils.JumpToAppStore(this, packageName, storePkg);
+            //CommonUtils.JumpToAppStore(this, storePkg);
         });
 
         //ListView
